@@ -1,11 +1,18 @@
 # gelf-amqp-bridge
 
 ## Description
-A bridge daemon for Graylog2 0.20 missing AMQP support.
+
+A bridge daemon that simple forwards GELF messages from AMQP to Graylog2 UDP.
+The reason I wrote this is because apparently Graylog2 0.20 is missing AMQP support.
+Hopefull that will change soon.
 
 This embarrasingly simple and probably and not scalable (single
 threaded) single jar Java application will take GELF gzip messages from an AMQP queue
 and then forward them on using Graylog2's UDP protocol.
+
+The daemon currently expects the messages from AMQP to be already gzipped which will be the case if your using
+**[gelfj](https://github.com/t0xa/gelfj)** latest AMQP support.
+
 
 ## Build
 
