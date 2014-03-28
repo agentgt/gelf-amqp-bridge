@@ -8,6 +8,7 @@ import java.security.NoSuchAlgorithmException;
 import org.graylog2.GelfAMQPSender;
 import org.graylog2.GelfMessage;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 
@@ -16,6 +17,7 @@ public class MainTest {
 	@Before
 	public void setUp() throws Exception {}
 
+	@Ignore
 	@Test
 	public void test() throws KeyManagementException, NoSuchAlgorithmException, IOException, URISyntaxException {
 		GelfAMQPSender sender = new GelfAMQPSender("amqp://localhost", "gelf", "gelf", 1);
